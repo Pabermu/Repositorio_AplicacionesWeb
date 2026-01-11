@@ -1,6 +1,6 @@
 <?php
 
-// 1️⃣ Función para calcular total del carrito
+//Función para calcular total del carrito
 function calcularTotal($carrito) {
     $total = 0;
 
@@ -12,14 +12,14 @@ function calcularTotal($carrito) {
     return $total;
 }
 
-// 2️⃣ Array del carrito
+//Array del carrito
 $carrito = [
     ["producto" => "Portátil", "precio" => 1200, "cantidad" => 1],
     ["producto" => "Ratón",    "precio" => 25,   "cantidad" => 2],
     ["producto" => "Teclado",  "precio" => 45,   "cantidad" => 1],
 ];
 
-// 3️⃣ Mostrar productos
+//Mostrar productos
 echo "<h3>Detalle del carrito</h3>";
 
 foreach ($carrito as $item) {
@@ -31,10 +31,10 @@ foreach ($carrito as $item) {
     echo "Subtotal: $" . $subtotal . "<br><br>";
 }
 
-// 4️⃣ Calcular total
+//Calcular total
 $total = calcularTotal($carrito);
 
-// 5️⃣ Calcular descuento
+//Calcular descuento
 $descuento = 0;
 
 if ($total > 1000) {
@@ -43,11 +43,11 @@ if ($total > 1000) {
     $descuento = 0.05; // 5%
 }
 
-// 6️⃣ Cálculos finales
+//Cálculos finales
 $montoDescuento = $total * $descuento;
 $totalFinal = $total - $montoDescuento;
 
-// 7️⃣ Mostrar resumen
+//Mostrar resumen
 echo "<h3>Resumen de compra</h3>";
 echo "Total sin descuento: $" . number_format($total,2) . "<br>";
 echo "Descuento aplicado: $" . number_format($montoDescuento,2) . "<br>";
